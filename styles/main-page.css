@@ -1,0 +1,160 @@
+.main-section-title {
+	text-align: center;
+	padding-top: 80px;
+	
+	
+}
+.main-section-title h2,.main-section-title h3 {
+	font-size:55pt;	
+	color:#ffe1d7;	
+	font-family: 'Tangerine', cursive;
+	font-weight:normal;
+}
+
+
+.main-section-intro {
+	font-family: 'Roboto Slab', serif;
+	font-size:14pt;
+	color:#bcb1c4;
+	padding-top:20px;
+}
+
+
+.main-section-intro .intro-points {
+	list-style:none;
+	padding-left:0;
+	max-width: 600px;
+	margin: auto;
+}
+
+.intro-points {
+	color: #ffe5de;
+}
+
+.main-section-intro li{
+	margin-bottom: 5px;
+}
+
+.main-section-text {
+	font-family: 'Roboto', sans-serif;
+	font-size:12pt;
+	color:#bcb1c4;
+	padding-top:20px;
+}
+.main-block3 {
+	padding-top:35px;
+	padding-bottom:30px;
+}
+.main-legend {
+	font-family: 'Roboto', sans-serif;
+}
+
+.description {
+	color: #bebbc4;
+	max-width: 800px;
+	margin: auto;
+	font-family: Roboto;
+	padding-bottom: 80px;
+}
+
+.description h1{
+	text-align: center;
+}
+
+.no-top-padding {
+	padding-top:0px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+.circlebg {
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+    height: auto;
+    background: #56435B;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-position: center center;
+    background-repeat:no-repeat;  
+    overflow: hidden;  
+}
+.circlebg img {
+    width: 70%;
+    padding-top: 15%;
+}
+.progress-bar{
+  background-color: #ff9278;
+}
+.progress {
+  margin: 0 auto;
+  height: 5px;
+  background-color: #614d1f;
+  box-shadow: 0px;
+  -webkit-box-shadow: 0px;
+}
+.planet-btn, .planet-btn:link, .planet-btn:active, .planet-btn:hover, .planet-btn:visited {
+	outline:none;
+}
+
+.moon-label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20.8131px;
+	fill : #FFF;
+	cursor: hand;
+}
+
+#the-sun:hover {
+	opacity: 0.8;
+}
+
+
+.intro-credits, .intro-credits a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #bcb1c4;
+	padding-bottom: 60px;
+}
+
+
+
+
+	/* responsive art on landing */
+
+.landing-viz {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.landing-viz svg {
+	max-width: 1600px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+/* smartphone portrait */
+@media screen and (max-width: 480px) and (max-aspect-ratio: 1/1) {
+
+	.landing-viz {
+		overflow: hidden;
+		margin-top: 20px;
+	}
+
+	.landing-viz svg {
+		margin: 0 -25%;
+	}
+}
+
+/* ipad portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.landing-viz {
+		overflow: hidden;
+		margin-top: 40px;
+	}
+
+	.landing-viz svg {
+		margin: 0 -25%;
+	}
+}

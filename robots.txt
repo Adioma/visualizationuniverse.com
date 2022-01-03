@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /legacy/
+Disallow: /import/
+
+
+Sitemap: http://visualizationuniverse.com/sitemap.xml

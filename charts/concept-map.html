@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>concept map - Visualization Universe</title>
+
+	<!-- Facebook OpenGraph tags -->
+	<meta property="fb:app_id" content="134054460473945" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Visualization Universe" />
+	<meta property="og:title" content="concept map - Visualization Universe" />
+	<meta property="og:description" content="Explore the most searched-for information about data visualization and infographics based on Google Trends data" />
+	<meta property="og:image" content="http://visualizationuniverse.com/assets/icons/charts/concept-map.png" />
+	<meta property="og:url" content="http://visualizationuniverse.com/charts/concept-map" />
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="concept map - Visualization Universe" />
+	<meta name="twitter:description" content="Explore the most searched-for information about data visualization and infographics based on Google Trends data" />
+	<meta name="twitter:site" content="@annavitals" />
+	<meta name="twitter:creator" content="@annavitals" />
+	<meta name="twitter:image" content="http://visualizationuniverse.com/assets/icons/charts/concept-map.png" />
+
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/icons/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/icons/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/icons/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/assets/icons/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/assets/icons/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/assets/icons/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/assets/icons/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/assets/icons/favicon/mstile-310x310.png" />
+
+
+		 
+	<link href="/styles/google-fonts.css" rel="stylesheet">	
+  	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-1.12.1-ui.js"></script>
+  	<script src="/js/bootstrap.min.js"></script> 
+  	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<script src="/js/d3.v4.min.js"></script>     
+    <script src="/js/d3-tip.js"></script>
+	<script src="/js/isotope.pkgd.js"></script>
+	<script src="/jsc/bundle.js"></script>
+	<link rel="stylesheet" href="/styles/app.css"/>
+</head>
+
+
+<body class="static-bg">
+
+	<nav class="navbar navbar-static-top navbar-main">
+		<div class="container-fluid">
+			<div class="navbar-header logo pull-left">
+				<a class="navbar-brand" href="/" id="homebutton" onclick="window.location='/'" title="The Visualization Universe"><img src="/assets/images/logo.png"></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid content">
+
+		<!-- Pop-up content -->
+
+		<div id="app" class="row">
+			<div id="charts" class="col-md-12 type">
+
+				<div class="modal" id ="modal">
+		            <div class="modal-dialog modal-lg">
+		              <div class="modal-content popup_bt">
+		                    <div class="modal-body content">
+		                        <section class="row" style="margin-top: 0;">
+									<div class="col-xs-12">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">×</button>
+										<h3 class="popup-title">concept map</h3>
+									</div>
+		                        </section>
+		                        <section class="row">
+									<div class="col-xs-12">
+										<div id='iconimg' class='pull-left'><img src="/assets/icons/charts/concept-map.png" /></div>
+										<div id='description' class=''>
+											<p>A concept map or conceptual diagram is a diagram that depicts suggested relationships between concepts. It is a graphical tool that instructional designers, engineers, technical writers, and others use to organize and structure knowledge.</p>
+											<p> <a class='toplink' href="https://en.wikipedia.org/wiki/Concept_map" target="_blank"> Read more </a> </p>
+										</div>
+									</div>
+		                        </section>
+		                        <section class="row">
+									<div class="col-xs-12">
+										<h4> Popularity Over Time </h4>
+										<div id="sparklineId" class="sparkline"></div>
+										<p> <a class='bottomlink' href='https://trends.google.com/trends/explore?q=/m/033qc9' target='_blank'>
+												<strong>View more</strong> on Google Trends </a>
+										 </p>
+									</div>
+		                        </section>
+		                        
+		                        <section class="row" style="display:block;">
+									<div class="col-xs-12">
+										<h4> Related Queries </h4>
+										<div id="queriesId"></div>
+									</div>
+		                        </section>
+		                        
+		                        <h4>&nbsp;</h4>
+		                         
+		                        <section class="row"  style="display:block;">
+									<div class="col-xs-12">
+		                                <h4> Related Topics </h4>
+		                                <div id="topicsId"></div>
+		                            </div>
+		                        </section>
+		                        
+		                        <section class="row" style="padding-top:50px; padding-bottom:00px;">
+
+									<div class="col-xs-12">
+										<label>Share:</label>
+									</div>
+
+		                            <div class="col-xs-8">
+		                                 <div class="sharing-links">
+		                                     <a class="btn btn-share btn-link" href="https://www.facebook.com/sharer/sharer.php?u=http://visualizationuniverse.com/charts/concept-map" title="Share on Facebook" target="_blank"> <img src="/assets/images/facebook-btn.svg" /></a>
+		                                     <a class="btn btn-share btn-link" href="http://twitter.com/share?text=Catalog+of+data+visualizations&url=http://visualizationuniverse.com/charts/concept-map" title="Share on Twitter" target="_blank"> <img src="/assets/images/twitter-btn.svg" /></a>
+		                                     <a class="btn btn-share btn-link" href="https://www.linkedin.com/cws/share?url=http://visualizationuniverse.com/charts/concept-map" title="Share on Linkeding" target="_blank"> <img src="/assets/images/linkedin-btn.svg" /></a>
+		                                 </div>
+		                            </div>                                    
+		                             <div class="col-xs-4">
+		                                     <span class="pull-right"><a class="btn btn-default pull-right" href="#" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">See More</a></span>
+		                             </div>
+		                         </section>
+		                    </div>
+		
+		                    
+		              </div>
+		            </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var queries = [{"value": 100.0, "title": "mapa conceptual"}, {"value": 25.0, "title": "mapas conceptuales"}, {"value": 10.0, "title": "concept map"}, {"value": 5.0, "title": "mapa mental"}, {"value": 5.0, "title": "mapa conceitual"}];
+		var topics = [{"mid": "/m/04_tb", "value": 100.0, "title": "Map"}, {"mid": "/m/04zhx", "value": 60.0, "title": "Mind map"}, {"mid": "/m/0203b", "value": 35.0, "title": "concept"}, {"mid": "/m/01r9v", "value": 20.0, "title": "Computer program"}];
+		var graphData = [{"date": "2016-06-04", "value": 74.0}, {"date": "2016-06-11", "value": 64.0}, {"date": "2016-06-18", "value": 56.0}, {"date": "2016-06-25", "value": 44.0}, {"date": "2016-07-02", "value": 43.0}, {"date": "2016-07-09", "value": 43.0}, {"date": "2016-07-16", "value": 39.0}, {"date": "2016-07-23", "value": 39.0}, {"date": "2016-07-30", "value": 44.0}, {"date": "2016-08-06", "value": 56.0}, {"date": "2016-08-13", "value": 68.0}, {"date": "2016-08-20", "value": 92.0}, {"date": "2016-08-27", "value": 98.0}, {"date": "2016-09-03", "value": 99.0}, {"date": "2016-09-10", "value": 92.0}, {"date": "2016-09-17", "value": 96.0}, {"date": "2016-09-24", "value": 97.0}, {"date": "2016-10-01", "value": 94.0}, {"date": "2016-10-08", "value": 88.0}, {"date": "2016-10-15", "value": 92.0}, {"date": "2016-10-22", "value": 89.0}, {"date": "2016-10-29", "value": 77.0}, {"date": "2016-11-05", "value": 93.0}, {"date": "2016-11-12", "value": 87.0}, {"date": "2016-11-19", "value": 75.0}, {"date": "2016-11-26", "value": 69.0}, {"date": "2016-12-03", "value": 54.0}, {"date": "2016-12-10", "value": 40.0}, {"date": "2016-12-17", "value": 18.0}, {"date": "2016-12-24", "value": 10.0}, {"date": "2016-12-31", "value": 25.0}, {"date": "2017-01-07", "value": 57.0}, {"date": "2017-01-14", "value": 58.0}, {"date": "2017-01-21", "value": 63.0}, {"date": "2017-01-28", "value": 73.0}, {"date": "2017-02-04", "value": 87.0}, {"date": "2017-02-11", "value": 99.0}, {"date": "2017-02-18", "value": 99.0}, {"date": "2017-02-25", "value": 92.0}, {"date": "2017-03-04", "value": 100.0}, {"date": "2017-03-11", "value": 99.0}, {"date": "2017-03-18", "value": 92.0}, {"date": "2017-03-25", "value": 98.0}, {"date": "2017-04-01", "value": 89.0}, {"date": "2017-04-08", "value": 48.0}, {"date": "2017-04-15", "value": 73.0}, {"date": "2017-04-22", "value": 86.0}, {"date": "2017-04-29", "value": 81.0}, {"date": "2017-05-06", "value": 85.0}, {"date": "2017-05-13", "value": 83.0}, {"date": "2017-05-20", "value": 81.0}, {"date": "2017-05-27", "value": 77.0}, {"date": "2017-06-03", "value": 72.0}, {"date": "2017-06-10", "value": 73.0}];
+		
+		// main init/rendering
+		$(function() {
+		    console.log( "ready!" );
+		    $("#modal").on("hidden.bs.modal", function () {
+		    	closeModal();
+		    });
+
+			$('#modal').modal('show');
+			buildSparkline();
+			buildRelatedItems(queries, "queriesId");
+			buildRelatedItems(topics, "topicsId");
+		});
+		
+		function closeModal() {
+			window.location.href = "/charts"; 
+		}
+		
+		function buildRelatedItems(items, parentId) {
+			
+			var parent = $("#" + parentId);
+			for(var idx in items) {
+				var item = items[idx];
+				
+				var htmlTemplate = "<div> " +
+                "<div style=\"margin-bottom:5px;margin-top:8px;\">"+item.title+"</div>" +
+                "<div class=\"progress\">" +
+                "    <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow="+item.value+" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: "+item.value+"%;\">" +
+                "        <span className=\"sr-only\">_value_</span>" +
+                "    </div>" +
+                "</div> " +    
+            	"</div>";
+            
+				parent.append(htmlTemplate);				
+			}
+		}
+		
+		function buildSparkline() {
+	        var width = 600;
+	        var height = 200;
+
+	        var svg = d3.selectAll("#sparklineId").append('svg')
+	                    .attr('class', 'bigline')
+	                    .attr("viewBox", "0 0 650 200")
+	                    .style('overflow', 'visible');
+	        
+	        var x = d3.scaleLinear().range([30, width - 10]);
+
+	        var month = d3.timeFormat('%B %Y');
+	        var thismonth = d3.timeFormat('%B');
+	        var today = new Date();
+	        var dayString = month(today).toString()
+	        var newYear = + dayString.substring(dayString.indexOf(' ')) - 1;
+
+	        svg.append('text')
+	            .text(thismonth(today) + ' ' + newYear)
+	            .attr('x', 30)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        svg.append('text')
+	            .text(month(today))
+	            .attr('x', width-10)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        var y = d3.scaleLinear()
+	            .range([height - 20, 20]);
+	        
+	        var linedata = [];
+	        for (var j=0; j < graphData.length; j++){
+	            linedata.push({"index": j, "value": graphData[j].value});
+	        }
+	        
+	        x.domain(d3.extent(linedata, function(d) { return +d.index; }));
+	        y.domain([0, 100]);     
+	        
+	        var xAxis = d3.axisBottom(x).ticks(30);
+	        var yAxis = d3.axisLeft(y).tickSize(-570).tickValues([0,50,100]).ticks(4);
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(0, 180)')
+	            .call(xAxis)
+	            .selectAll('text')
+	                .remove();
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(30, 0)')
+	            .call(yAxis)
+	                .selectAll('text')
+	                .style('transform', 'translate(-20, 0)')
+
+	        var linefunc = d3.line()
+	            .x(function(d) { return x(d.index); })
+	            .y(function(d) { return y(d.value); })
+	            .curve(d3.curveBasis);
+
+	        var sparks = svg.append('path')
+	              .datum(linedata)
+	              .attr('id', 'line1')
+	              .attr('fill', 'none')
+	              .attr('stroke', '#FDBD00')
+	              .attr('stroke-linejoin', 'round')
+	              .attr('stroke-linecap', 'round')
+	              .attr('stroke-width', 1.5)
+	              .attr('d', linefunc);
+
+	        svg.append('circle')
+	              .attr('fill', '#FDBD00')
+	              .attr('r', 3)
+	              .attr('cx', x(linedata[0].index))
+	              .attr('cy', y(linedata[0].value));
+	    }
+		
+	</script>
+	
+
+       
+</body>
+</html>

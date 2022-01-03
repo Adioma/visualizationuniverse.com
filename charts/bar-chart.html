@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>bar chart - Visualization Universe</title>
+
+	<!-- Facebook OpenGraph tags -->
+	<meta property="fb:app_id" content="134054460473945" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Visualization Universe" />
+	<meta property="og:title" content="bar chart - Visualization Universe" />
+	<meta property="og:description" content="Explore the most searched-for information about data visualization and infographics based on Google Trends data" />
+	<meta property="og:image" content="http://visualizationuniverse.com/assets/icons/charts/bar-chart.png" />
+	<meta property="og:url" content="http://visualizationuniverse.com/charts/bar-chart" />
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="bar chart - Visualization Universe" />
+	<meta name="twitter:description" content="Explore the most searched-for information about data visualization and infographics based on Google Trends data" />
+	<meta name="twitter:site" content="@annavitals" />
+	<meta name="twitter:creator" content="@annavitals" />
+	<meta name="twitter:image" content="http://visualizationuniverse.com/assets/icons/charts/bar-chart.png" />
+
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/icons/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/icons/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/icons/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/assets/icons/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/assets/icons/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/assets/icons/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/assets/icons/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/assets/icons/favicon/mstile-310x310.png" />
+
+
+		 
+	<link href="/styles/google-fonts.css" rel="stylesheet">	
+  	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-1.12.1-ui.js"></script>
+  	<script src="/js/bootstrap.min.js"></script> 
+  	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<script src="/js/d3.v4.min.js"></script>     
+    <script src="/js/d3-tip.js"></script>
+	<script src="/js/isotope.pkgd.js"></script>
+	<script src="/jsc/bundle.js"></script>
+	<link rel="stylesheet" href="/styles/app.css"/>
+</head>
+
+
+<body class="static-bg">
+
+	<nav class="navbar navbar-static-top navbar-main">
+		<div class="container-fluid">
+			<div class="navbar-header logo pull-left">
+				<a class="navbar-brand" href="/" id="homebutton" onclick="window.location='/'" title="The Visualization Universe"><img src="/assets/images/logo.png"></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid content">
+
+		<!-- Pop-up content -->
+
+		<div id="app" class="row">
+			<div id="charts" class="col-md-12 type">
+
+				<div class="modal" id ="modal">
+		            <div class="modal-dialog modal-lg">
+		              <div class="modal-content popup_bt">
+		                    <div class="modal-body content">
+		                        <section class="row" style="margin-top: 0;">
+									<div class="col-xs-12">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">×</button>
+										<h3 class="popup-title">bar chart</h3>
+									</div>
+		                        </section>
+		                        <section class="row">
+									<div class="col-xs-12">
+										<div id='iconimg' class='pull-left'><img src="/assets/icons/charts/bar-chart.png" /></div>
+										<div id='description' class=''>
+											<p>A bar chart or bar graph is a chart or graph that presents grouped data with rectangular bars with lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally.</p>
+											<p> <a class='toplink' href="https://en.wikipedia.org/wiki/Bar_chart" target="_blank"> Read more </a> </p>
+										</div>
+									</div>
+		                        </section>
+		                        <section class="row">
+									<div class="col-xs-12">
+										<h4> Popularity Over Time </h4>
+										<div id="sparklineId" class="sparkline"></div>
+										<p> <a class='bottomlink' href='https://trends.google.com/trends/explore?q=/m/022zt9' target='_blank'>
+												<strong>View more</strong> on Google Trends </a>
+										 </p>
+									</div>
+		                        </section>
+		                        
+		                        <section class="row" style="display:block;">
+									<div class="col-xs-12">
+										<h4> Related Queries </h4>
+										<div id="queriesId"></div>
+									</div>
+		                        </section>
+		                        
+		                        <h4>&nbsp;</h4>
+		                         
+		                        <section class="row"  style="display:block;">
+									<div class="col-xs-12">
+		                                <h4> Related Topics </h4>
+		                                <div id="topicsId"></div>
+		                            </div>
+		                        </section>
+		                        
+		                        <section class="row" style="padding-top:50px; padding-bottom:00px;">
+
+									<div class="col-xs-12">
+										<label>Share:</label>
+									</div>
+
+		                            <div class="col-xs-8">
+		                                 <div class="sharing-links">
+		                                     <a class="btn btn-share btn-link" href="https://www.facebook.com/sharer/sharer.php?u=http://visualizationuniverse.com/charts/bar-chart" title="Share on Facebook" target="_blank"> <img src="/assets/images/facebook-btn.svg" /></a>
+		                                     <a class="btn btn-share btn-link" href="http://twitter.com/share?text=Catalog+of+data+visualizations&url=http://visualizationuniverse.com/charts/bar-chart" title="Share on Twitter" target="_blank"> <img src="/assets/images/twitter-btn.svg" /></a>
+		                                     <a class="btn btn-share btn-link" href="https://www.linkedin.com/cws/share?url=http://visualizationuniverse.com/charts/bar-chart" title="Share on Linkeding" target="_blank"> <img src="/assets/images/linkedin-btn.svg" /></a>
+		                                 </div>
+		                            </div>                                    
+		                             <div class="col-xs-4">
+		                                     <span class="pull-right"><a class="btn btn-default pull-right" href="#" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">See More</a></span>
+		                             </div>
+		                         </section>
+		                    </div>
+		
+		                    
+		              </div>
+		            </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var groupId = "charts";
+		var itemSlug = "bar-chart";
+		var dataItem = {};
+		var queries = {};
+		var topics = {};
+		var graphData = [];
+
+		function closeModal() {
+			window.location.href = "/charts";
+		}
+	</script>
+
+	<script src="/js/popup-page.js"></script>
+
+	<script id="GAtracking">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-101798838-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+       
+</body>
+</html>

@@ -1,0 +1,87 @@
+.main-footer {
+	color:#160421;
+	background-color: #ffe1d7;		
+	margin: auto;
+	font-family: 'Roboto Slab', serif;
+	padding-bottom:5px;
+	padding-top:30px;
+	padding-bottom:50px;
+	text-align: left;
+}
+
+.main-footer p {
+	font-size: 14px;
+	font-family: 'Roboto Slab', serif;
+}
+
+.main-footer a:hover,.main-footer a:visited, .main-footer a:active {
+	text-decoration:none;
+}
+
+.footer-title{
+	font-family: 'Tangerine', cursive;
+	font-weight: bold;
+	font-size:30pt;
+	text-align:center;
+}
+
+.footer-text a, .footer-text a:visited, .footer-text a:hover, .footer-text a:active{
+	 color: #614d1f;
+}
+.footer-text a {
+	border-bottom: 1px dotted #614d1f;
+}
+
+.footer-text a:hover {
+	border-bottom: 1px solid #614d1f;
+}
+footer > div.row {
+	max-width: 900px;
+	margin: auto;
+}
+
+
+#methodology-modal .modal-content {
+	background: rgba(44,37,61, 1);
+	border: 3px solid #41394e;
+	border-radius: 8px;
+	text-align: left;
+	color: #e5e5e5;
+}
+
+#methodology-modal .close {
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	opacity: .9;
+	color: #FFF;
+	z-index: 999;
+}
+
+#methodology-modal a {
+	font-style: italic;
+}
+
+#methodology-modal a, #methodology-modal a:hover {
+	color: #FFF;
+}
+
+footer .sharing-links {
+	padding-top: 20px;
+}
+
+footer .sharing-links a {
+	margin-right:5px;
+	padding: 0 6px;
+}
+
+footer .sharing-links img {
+	opacity: 0.75;
+	height: 34px;
+	filter:invert(100%);
+	-webkit-filter : invert(100%);
+	-moz-filter    : invert(100%);
+	-o-filter      : invert(100%);
+	-ms-filter     : invert(100%);
+}

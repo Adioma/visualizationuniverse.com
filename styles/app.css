@@ -1,0 +1,532 @@
+* {
+  transform-origin: inherit ;
+}
+
+body {
+  background: #181123;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #e5e5e5;
+}
+
+div {
+  position: relative;
+}
+
+h1, h2, h3, h4, p { 
+  font-family: "Raleway";
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p { 
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Open Sans";
+}
+
+.progress-bar{
+  background-color: #ff9278;
+}
+
+.progress-bar-above-max {
+  background-color: #F9543E;
+}
+
+.progress {
+  margin: 0 auto;
+  height: 5px;
+  background-color: #614d1f;
+  box-shadow: 0px;
+  -webkit-box-shadow: 0px;
+}
+
+#sortscharts {
+  margin: 20px 0;
+}
+
+.sparkline-graph {
+  stroke: #bba153;
+}
+
+button {
+  background-color: #3B2A56;
+  border: none;
+  border-radius: 5px;
+  margin: 2px 5px;
+}
+
+.circlebg {
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+    height: auto;
+    background: #56435B;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-position: center center;
+    background-repeat:no-repeat;  
+    overflow: hidden;  
+}
+
+.bookbg {
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+    height: 130px;
+    background: #56435B;
+    -moz-border-radius: 10%;
+    -webkit-border-radius: 10%;
+    background-position: center center;
+    background-repeat:no-repeat;  
+    overflow: hidden;  
+}
+
+.circlebg img {
+    width: 70%;
+    padding-top: 15%;
+}
+
+.bookbg img {
+    width: 70%;
+    padding-top: 15%; 
+    padding-bottom: 15%;
+    height: 130px;
+}
+
+.type {
+  background-color: #181123;
+  /*padding: 10px 20px 20px 20px;*/
+  /*margin: 10px;*/
+  padding: 0;
+  margin: 0;
+  clear: both;
+  overflow: hidden;
+  /*position:absolute;*/
+}
+
+#homepage{
+  position:absolute;
+}
+
+.grids {
+  padding: 10px;
+  display: block;
+  width: 175px;
+  height: auto;
+  clear:both;
+}
+
+.volume, .delta {
+  display: none;
+}
+
+.empty { 
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 2;
+  background-image: url('../assets/empty.gif');
+}  
+
+.page {
+  margin-top: 100px;
+  text-align: left;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../assets/empty.gif');
+  z-index:3;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.overlayf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../assets/empty.gif');
+  z-index:2;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 40px;
+}
+
+.popup {
+  background: rgba(0,0,0,.8);
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: left;
+}
+
+.popup .close,.popup_bt .close {
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: .9;
+  color: #FFF;
+  z-index: 999;
+}
+
+.popup .close:hover {
+  color: #FFF;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+#app .modal-content {
+  background: rgba(44,37,61,.9);
+  border: 3px solid #41394e;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.modal-content section {
+  margin-top: 20px;
+}
+
+.modal-content .full-description {
+  clear: both;
+}
+
+.modal-footer-buttons {
+  padding-top: 50px;
+}
+
+.homeb{
+  width: 90%;
+  margin: 5%;
+  padding: 10%;
+}
+
+p.name {
+  padding-top: 10px;
+  min-height: 52px;
+  color: #bfb6be;
+}
+
+#iconimg {
+  max-width: 150px;
+  padding: 0px 20px 20px 0;
+  background-position: center center;
+  background-repeat:no-repeat;  
+  overflow: hidden;  
+}
+
+#iconimg img {
+  width: 100%; 
+}
+
+a.toplink, a.bottomlink {
+  color: white;
+  font-weight: 700 !important;
+  z-index: 999 !important;
+}
+
+a.bottomlink {
+  font-weight: normal !important;
+}
+
+.popleft {
+  float: left;
+  margin: 0px;
+}
+
+.sparkline {
+  z-index: 3 !important;
+}
+
+.axis line{
+  stroke-width: .5;
+  stroke: white !important;
+}
+g.axis path {
+  stroke-width: 1;
+  stroke: #fff;
+}
+
+.axis text{
+  fill: white;
+}
+
+.grid-legend {
+  font-size: 70%;
+}
+
+.legend-col1{
+  text-align: left;
+}
+
+.legend-col2{
+  text-align: right;
+}
+
+.sortby-label {
+  color: #FFF;
+}
+
+
+/* better transition for popup, still there is room to improveqq issue #17
+https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect */
+.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sharing-links a {
+  margin-right:5px;
+  padding: 0 6px;
+}
+
+.sharing-links img {
+  height: 34px;
+}
+
+.menu-icon {
+  height: 18px;
+}
+
+.menu-label {
+  display: none;
+}
+
+#chartsbutton, #booksbutton, #toolsbutton {
+  font-size: 12px !important;
+  width: 38px;
+  border-radius: 18px;
+  padding: 8px 8px;
+}
+
+.navbar-main .navbar-header.logo{
+  z-index: 1000;
+}
+
+.navbar-main .navbar-brand img{
+  height: 44px;
+}
+
+.navbar-main .navbar-brand {
+  height: 44px;
+  padding: 12px;
+}
+
+.navbar-btn {
+  background-color: #56435B;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 5px 0px;  
+}
+
+.navbar-btn:focus {
+	outline:0 !important;	
+}
+
+#toolsbutton {
+	margin-right:58px;
+}
+
+.navbar-main .navbar-btn.active{
+  border: 1.2pt solid #FFF;
+}
+
+.navbar-btn:hover {
+  color: #FFF;
+}
+
+.navbar-main {
+  margin-bottom: 0 !important;
+}
+
+
+/* footer jumping fix */
+.container-fluid.content {
+  min-height: 1800px;
+}
+
+
+#books .bookbg img{
+  filter: grayscale(75%);
+  -webkit-filter: grayscale(75%);
+}
+
+#books .bookbg img:hover{
+  filter: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.suggestion {
+  color: #66526b;
+}
+.suggestion a, .suggestion a:hover {
+  color: #7e7788;
+}
+
+
+.sort-button{
+  background: none;
+  border: 1px solid #6B617A;
+  padding-right:24px;
+  outline:none;
+}
+
+.sort-buttons-container {
+  margin: auto;
+}
+
+.visible-xxs {
+  display: none;
+}
+
+@media screen and (min-width: 1601px) {
+  .grids {   /* 9 columns */
+    width: 11.1% !important;
+  }
+
+  .grid {
+    max-width: 1600px !important;
+    margin: auto !important;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .grids {   /* 6 columns */
+    width: 16.6% !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .grids {   /* 6 columns */
+    width: 16.6% !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .grids {    /* 4 columns */
+    width: 25% !important;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .grids {   /* 3 columns */
+    width: 33% !important;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .grids {  /* 2 columns */
+    width: 49.9%;
+    padding: 10px 5px;
+  }
+
+  .modal #iconimg {
+    float: none !important;
+    margin: auto;
+  }
+
+  .sharing-links a {
+    margin-right: 0;
+    padding: 0 3px;
+  }
+
+  .sort-buttons-container td{
+    width: 33%;
+    padding: 3px;
+  }
+
+  .sort-button {
+    width: 100%;
+    font-size: 90%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .visible-xxs {
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .legend-col1, .legend-col2 {
+    text-align: center !important;
+  }
+
+  #books .grid-item .name {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+.grid-item a:hover {
+	text-decoration:none;
+}
+
+.sort-invisible {
+	visibility: hidden;
+}
+.popover {
+	background-color:#56435B;
+	color:#fff;	
+}
+.popover.bottom>.arrow:after {	
+	border-bottom-color:#56435B;
+}
+.help-button, .help-button:active, .help-button:visited, .help-button:hover, .help-button:link {
+	text-decoration:none;
+	outline:none;
+	margin-left:5px;	    
+}
+#homebutton, #homebutton:active, #homebutton:visited, #homebutton:hover, #homebutton:link {	
+	outline:none;
+}

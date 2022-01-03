@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Appe Keynote - Visualization Universe</title>
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/icons/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/icons/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/icons/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/assets/icons/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/assets/icons/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/assets/icons/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/assets/icons/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/assets/icons/favicon/mstile-310x310.png" />
+
+
+		 
+	<link href="/styles/google-fonts.css" rel="stylesheet">	
+  	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-1.12.1-ui.js"></script>
+  	<script src="/js/bootstrap.min.js"></script> 
+  	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<script src="/js/d3.v4.min.js"></script>     
+    <script src="/js/d3-tip.js"></script>
+	<script src="/js/isotope.pkgd.js"></script>
+	<script src="/jsc/bundle.js"></script>
+	<link rel="stylesheet" href="/styles/app.css"/>
+</head>
+
+
+<body>
+	<div class="col-md-10 col-md-offset-1">
+
+		<!-- Pop-up content -->
+		<section id="content">
+		  <ul>
+			  <button class="button" id="homebutton" onclick="window.location='/'">home</button>
+			  <button class="button" id="chartsbutton" onclick="window.location='/charts/';">charts</button>
+			  <button class="button" id="booksbutton" onclick="window.location='/books/';">books</button>
+			  <button class="button" id="toolsbutton" onclick="window.location='/tools/';">tools</button>
+	      </ul>
+	    </section>
+		<div id="app" class="row">
+			<div id="charts" class="col-md-12 type">
+				<div class="modal" id ="modal">
+		            <div class="modal-dialog modal-lg">
+		              <div class="modal-content popup_bt">
+		                
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">×</button>                    
+		                    <div class="container-fluid content"  style="width:80%;">
+		                        <div class="row">
+		                            <h3 class='col-md-12'>Appe Keynote</h3>
+		                        </div>
+		                        <div class="row">
+		                            <div id='iconimg' class='col-md-2'><img src="/assets/icons/tools/appe-keynote.png" /></div>
+		                            <div id='description' class='col-md-10'>
+		                                <p>Everything said above about PowerPoint can be directly applied to Keynote, Apple's presentation product equivalent. The video below shows it in action, as the software tool behind the famous presentation slides used by Al Gore in the Inconvenient Truth.</p>
+		                                <p> <a class='toplink' href="http://www.apple.com/uk/iwork/keynote/" target="_blank"> Read more </a> </p>
+		                            </div>
+		                        </div>                        
+		                        <div class="row">
+		                            <div class='col-md-12'>
+		                                <h4> Popularity Over Time </h4>
+		                                <div id="sparklineId" class="sparkline"></div>
+		                                <p> <a class='bottomlink' href="https://trends.google.com/trends/explore?q=/m/01qkry" target='_blank'> 
+		                                        <strong>View more</strong> on Google Trends </a> 
+		                                 </p>
+		                            </div>
+		                        </div>
+		                        
+		                        <div class="row" style="display:block;">
+		                            <div class='col-md-12'>
+		                                <h4> Related Queries </h4>            
+		                                <div id="queriesId"></div>
+		                            </div>
+		                        </div>
+		                        
+		                        <h4>&nbsp;</h4>
+		                         
+		                        <div class="row"  style="display:block;">
+		                            <div class='col-md-12'>
+		                                <h4> Related Topics </h4>
+		                                <div id="topicsId"></div>
+		                            </div>
+		                        </div>
+		                        
+		                        <div class="row" style="padding-top:20px;padding-bottom:20px;">
+		                            <div class="col-md-8">
+		                                 <div class="sharing-links">
+		                                     <a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u=http://visual-universe.adioma.com/tools_generic/appe-keynote" title="Share on Facebook" target="_blank">Facebook</a>
+		                                     <a class="btn btn-default" href="http://twitter.com/share?text=Catalog+of+data+visualizations&url=http://visual-universe.adioma.com/tools_generic/appe-keynote" title="Share on Twitter" target="_blank">Twitter</a>
+		                                     <a class="btn btn-default" href="https://www.linkedin.com/cws/share?url=http://visual-universe.adioma.com/tools_generic/appe-keynote" title="Share on Linkeding" target="_blank">Linkedin</a>
+		                                 </div>
+		                            </div>                                    
+		                             <div class="col-md-4">                              
+		                                     <span class="pull-right"><a class="btn btn-default pull-right" href="#" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">Explore More</a></span>
+		                             </div>
+		                         </div>
+		                    </div>
+		
+		                    
+		              </div>
+		            </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var queries = [{"value": 100.0, "title": "keynote"}, {"value": 45.0, "title": "apple keynote"}, {"value": 15.0, "title": "apple"}, {"value": 5.0, "title": "modi keynote"}, {"value": 5.0, "title": "key note"}, {"value": 5.0, "title": "apple keynote 2014"}];
+		var topics = [{"mid": "/m/0k8z", "value": 100.0, "title": "Apple Inc."}, {"mid": "/m/0k7vl", "value": 30.0, "title": "Microsoft PowerPoint"}, {"mid": "/m/09rvlp4", "value": 30.0, "title": "iPad"}, {"mid": "/m/02y3rj", "value": 20.0, "title": "Presentation"}, {"mid": "/m/0zd6", "value": 20.0, "title": "Macintosh"}, {"mid": "/m/027lnzs", "value": 20.0, "title": "iPhone"}];
+		var graphData = [{"date": "2016-06-04", "value": 11.0}, {"date": "2016-06-11", "value": 26.0}, {"date": "2016-06-18", "value": 9.0}, {"date": "2016-06-25", "value": 8.0}, {"date": "2016-07-02", "value": 8.0}, {"date": "2016-07-09", "value": 8.0}, {"date": "2016-07-16", "value": 8.0}, {"date": "2016-07-23", "value": 8.0}, {"date": "2016-07-30", "value": 8.0}, {"date": "2016-08-06", "value": 8.0}, {"date": "2016-08-13", "value": 9.0}, {"date": "2016-08-20", "value": 12.0}, {"date": "2016-08-27", "value": 15.0}, {"date": "2016-09-03", "value": 100.0}, {"date": "2016-09-10", "value": 14.0}, {"date": "2016-09-17", "value": 12.0}, {"date": "2016-09-24", "value": 12.0}, {"date": "2016-10-01", "value": 14.0}, {"date": "2016-10-08", "value": 11.0}, {"date": "2016-10-15", "value": 13.0}, {"date": "2016-10-22", "value": 29.0}, {"date": "2016-10-29", "value": 12.0}, {"date": "2016-11-05", "value": 11.0}, {"date": "2016-11-12", "value": 26.0}, {"date": "2016-11-19", "value": 66.0}, {"date": "2016-11-26", "value": 21.0}, {"date": "2016-12-03", "value": 15.0}, {"date": "2016-12-10", "value": 12.0}, {"date": "2016-12-17", "value": 10.0}, {"date": "2016-12-24", "value": 7.0}, {"date": "2016-12-31", "value": 9.0}, {"date": "2017-01-07", "value": 11.0}, {"date": "2017-01-14", "value": 10.0}, {"date": "2017-01-21", "value": 10.0}, {"date": "2017-01-28", "value": 10.0}, {"date": "2017-02-04", "value": 10.0}, {"date": "2017-02-11", "value": 10.0}, {"date": "2017-02-18", "value": 10.0}, {"date": "2017-02-25", "value": 11.0}, {"date": "2017-03-04", "value": 11.0}, {"date": "2017-03-11", "value": 11.0}, {"date": "2017-03-18", "value": 11.0}, {"date": "2017-03-25", "value": 11.0}, {"date": "2017-04-01", "value": 10.0}, {"date": "2017-04-08", "value": 9.0}, {"date": "2017-04-15", "value": 10.0}, {"date": "2017-04-22", "value": 10.0}, {"date": "2017-04-29", "value": 10.0}, {"date": "2017-05-06", "value": 11.0}, {"date": "2017-05-13", "value": 13.0}, {"date": "2017-05-20", "value": 11.0}, {"date": "2017-05-27", "value": 11.0}, {"date": "2017-06-03", "value": 34.0}];
+		
+		// main init/rendering
+		$(function() {
+		    console.log( "ready!" );
+		    $("#modal").on("hidden.bs.modal", function () {
+		    	closeModal();
+		    });
+
+			$('#modal').modal('show');
+			buildSparkline();
+			buildRelatedItems(queries, "queriesId");
+			buildRelatedItems(topics, "topicsId");
+		});
+		
+		function closeModal() {
+			window.location.href = "/tools"; 
+		}
+		
+		function buildRelatedItems(items, parentId) {
+			
+			var parent = $("#" + parentId);
+			for(var idx in items) {
+				var item = items[idx];
+				
+				var htmlTemplate = "<div> " +
+                "<div style=\"margin-bottom:5px;margin-top:8px;\">"+item.title+"</div>" +
+                "<div class=\"progress\">" +
+                "    <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow="+item.value+" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: "+item.value+"%;\">" +
+                "        <span className=\"sr-only\">_value_</span>" +
+                "    </div>" +
+                "</div> " +    
+            	"</div>";
+            
+				parent.append(htmlTemplate);				
+			}
+		}
+		
+		function buildSparkline() {
+	        var width = 600;
+	        var height = 200;
+
+	        var svg = d3.selectAll("#sparklineId").append('svg')
+	                    .attr('class', 'bigline')
+	                    .attr("viewBox", "0 0 650 200")
+	                    .style('overflow', 'visible');
+	        
+	        var x = d3.scaleLinear().range([30, width - 10]);
+
+	        var month = d3.timeFormat('%B %Y');
+	        var thismonth = d3.timeFormat('%B');
+	        var today = new Date();
+	        var dayString = month(today).toString()
+	        var newYear = + dayString.substring(dayString.indexOf(' ')) - 1;
+
+	        svg.append('text')
+	            .text(thismonth(today) + ' ' + newYear)
+	            .attr('x', 30)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        svg.append('text')
+	            .text(month(today))
+	            .attr('x', width-10)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        var y = d3.scaleLinear()
+	            .range([height - 20, 20]);
+	        
+	        var linedata = [];
+	        for (var j=0; j < graphData.length; j++){
+	            linedata.push({"index": j, "value": graphData[j].value});
+	        }
+	        
+	        x.domain(d3.extent(linedata, function(d) { return +d.index; }));
+	        y.domain([0, 100]);     
+	        
+	        var xAxis = d3.axisBottom(x).ticks(30);
+	        var yAxis = d3.axisLeft(y).tickSize(-570).tickValues([0,50,100]).ticks(4);
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(0, 180)')
+	            .call(xAxis)
+	            .selectAll('text')
+	                .remove();
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(30, 0)')
+	            .call(yAxis)
+	                .selectAll('text')
+	                .style('transform', 'translate(-20, 0)')
+
+	        var linefunc = d3.line()
+	            .x(function(d) { return x(d.index); })
+	            .y(function(d) { return y(d.value); })
+	            .curve(d3.curveBasis);
+
+	        var sparks = svg.append('path')
+	              .datum(linedata)
+	              .attr('id', 'line1')
+	              .attr('fill', 'none')
+	              .attr('stroke', '#FDBD00')
+	              .attr('stroke-linejoin', 'round')
+	              .attr('stroke-linecap', 'round')
+	              .attr('stroke-width', 1.5)
+	              .attr('d', linefunc);
+
+	        svg.append('circle')
+	              .attr('fill', '#FDBD00')
+	              .attr('r', 3)
+	              .attr('cx', x(linedata[0].index))
+	              .attr('cy', y(linedata[0].value));
+	    }
+		
+	</script>
+	
+
+       
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Krita - Visualization Universe</title>
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/icons/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/icons/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/icons/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/assets/icons/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/assets/icons/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/assets/icons/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/assets/icons/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/assets/icons/favicon/mstile-310x310.png" />
+
+
+		 
+	<link href="/styles/google-fonts.css" rel="stylesheet">	
+  	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-1.12.1-ui.js"></script>
+  	<script src="/js/bootstrap.min.js"></script> 
+  	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<script src="/js/d3.v4.min.js"></script>     
+    <script src="/js/d3-tip.js"></script>
+	<script src="/js/isotope.pkgd.js"></script>
+	<script src="/jsc/bundle.js"></script>
+	<link rel="stylesheet" href="/styles/app.css"/>
+</head>
+
+
+<body>
+	<div class="col-md-10 col-md-offset-1">
+
+		<!-- Pop-up content -->
+		<section id="content">
+		  <ul>
+			  <button class="button" id="homebutton" onclick="window.location='/'">home</button>
+			  <button class="button" id="chartsbutton" onclick="window.location='/charts/';">charts</button>
+			  <button class="button" id="booksbutton" onclick="window.location='/books/';">books</button>
+			  <button class="button" id="toolsbutton" onclick="window.location='/tools/';">tools</button>
+	      </ul>
+	    </section>
+		<div id="app" class="row">
+			<div id="charts" class="col-md-12 type">
+				<div class="modal" id ="modal">
+		            <div class="modal-dialog modal-lg">
+		              <div class="modal-content popup_bt">
+		                
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">×</button>                    
+		                    <div class="container-fluid content"  style="width:80%;">
+		                        <div class="row">
+		                            <h3 class='col-md-12'>Krita</h3>
+		                        </div>
+		                        <div class="row">
+		                            <div id='iconimg' class='col-md-2'><img src="/assets/icons/tools/krita.png" /></div>
+		                            <div id='description' class='col-md-10'>
+		                                <p>Krita is a raster graphics editor based on Qt 5 and the KDE Frameworks 5. Krita is designed to be a digital painting application. It has been influenced to some extent by software like Corel Painter and SAI. Krita packs with some key features different from most of its kind, including the ability to work with both bitmap and vector illustration. The developers also strive to simplify user interaction and focus on features more relevant to painting and drawing.</p>
+		                                <p> <a class='toplink' href="https://krita.org" target="_blank"> Read more </a> </p>
+		                            </div>
+		                        </div>                        
+		                        <div class="row">
+		                            <div class='col-md-12'>
+		                                <h4> Popularity Over Time </h4>
+		                                <div id="sparklineId" class="sparkline"></div>
+		                                <p> <a class='bottomlink' href="https://trends.google.com/trends/explore?q=/m/06jxw4" target='_blank'> 
+		                                        <strong>View more</strong> on Google Trends </a> 
+		                                 </p>
+		                            </div>
+		                        </div>
+		                        
+		                        <div class="row" style="display:block;">
+		                            <div class='col-md-12'>
+		                                <h4> Related Queries </h4>            
+		                                <div id="queriesId"></div>
+		                            </div>
+		                        </div>
+		                        
+		                        <h4>&nbsp;</h4>
+		                         
+		                        <div class="row"  style="display:block;">
+		                            <div class='col-md-12'>
+		                                <h4> Related Topics </h4>
+		                                <div id="topicsId"></div>
+		                            </div>
+		                        </div>
+		                        
+		                        <div class="row" style="padding-top:20px;padding-bottom:20px;">
+		                            <div class="col-md-8">
+		                                 <div class="sharing-links">
+		                                     <a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u=http://visual-universe.adioma.com/tools_generic/krita" title="Share on Facebook" target="_blank">Facebook</a>
+		                                     <a class="btn btn-default" href="http://twitter.com/share?text=Catalog+of+data+visualizations&url=http://visual-universe.adioma.com/tools_generic/krita" title="Share on Twitter" target="_blank">Twitter</a>
+		                                     <a class="btn btn-default" href="https://www.linkedin.com/cws/share?url=http://visual-universe.adioma.com/tools_generic/krita" title="Share on Linkeding" target="_blank">Linkedin</a>
+		                                 </div>
+		                            </div>                                    
+		                             <div class="col-md-4">                              
+		                                     <span class="pull-right"><a class="btn btn-default pull-right" href="#" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal();">Explore More</a></span>
+		                             </div>
+		                         </div>
+		                    </div>
+		
+		                    
+		              </div>
+		            </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var queries = [{"value": 100.0, "title": "krita"}, {"value": 5.0, "title": "krita download"}, {"value": 5.0, "title": "gimp"}, {"value": 5.0, "title": "\u0647\u064a\u0648\u0646\u062f\u0627\u064a \u0643\u0631\u064a\u062a\u0627"}, {"value": 5.0, "title": "krita tutorial"}, {"value": 0.0, "title": "krita animation"}, {"value": 0.0, "title": "\u0643\u0631\u064a\u062a\u0627"}];
+		var topics = [{"mid": "/m/0blws", "value": 100.0, "title": "Hyundai Motor Company"}, {"mid": "/m/039ww", "value": 95.0, "title": "GIMP"}, {"mid": "/m/06710", "value": 70.0, "title": "Adobe Photoshop"}, {"mid": "/m/02csf", "value": 60.0, "title": "Drawing"}, {"mid": "/m/02chd9", "value": 60.0, "title": "Brush"}, {"mid": "/m/01mf0", "value": 45.0, "title": "Software"}];
+		var graphData = [{"date": "2016-06-04", "value": 80.0}, {"date": "2016-06-11", "value": 81.0}, {"date": "2016-06-18", "value": 77.0}, {"date": "2016-06-25", "value": 72.0}, {"date": "2016-07-02", "value": 80.0}, {"date": "2016-07-09", "value": 77.0}, {"date": "2016-07-16", "value": 76.0}, {"date": "2016-07-23", "value": 72.0}, {"date": "2016-07-30", "value": 73.0}, {"date": "2016-08-06", "value": 70.0}, {"date": "2016-08-13", "value": 73.0}, {"date": "2016-08-20", "value": 76.0}, {"date": "2016-08-27", "value": 73.0}, {"date": "2016-09-03", "value": 75.0}, {"date": "2016-09-10", "value": 73.0}, {"date": "2016-09-17", "value": 72.0}, {"date": "2016-09-24", "value": 73.0}, {"date": "2016-10-01", "value": 80.0}, {"date": "2016-10-08", "value": 75.0}, {"date": "2016-10-15", "value": 75.0}, {"date": "2016-10-22", "value": 73.0}, {"date": "2016-10-29", "value": 80.0}, {"date": "2016-11-05", "value": 77.0}, {"date": "2016-11-12", "value": 76.0}, {"date": "2016-11-19", "value": 77.0}, {"date": "2016-11-26", "value": 75.0}, {"date": "2016-12-03", "value": 79.0}, {"date": "2016-12-10", "value": 88.0}, {"date": "2016-12-17", "value": 83.0}, {"date": "2016-12-24", "value": 100.0}, {"date": "2016-12-31", "value": 86.0}, {"date": "2017-01-07", "value": 87.0}, {"date": "2017-01-14", "value": 86.0}, {"date": "2017-01-21", "value": 82.0}, {"date": "2017-01-28", "value": 96.0}, {"date": "2017-02-04", "value": 88.0}, {"date": "2017-02-11", "value": 90.0}, {"date": "2017-02-18", "value": 86.0}, {"date": "2017-02-25", "value": 82.0}, {"date": "2017-03-04", "value": 78.0}, {"date": "2017-03-11", "value": 77.0}, {"date": "2017-03-18", "value": 78.0}, {"date": "2017-03-25", "value": 78.0}, {"date": "2017-04-01", "value": 81.0}, {"date": "2017-04-08", "value": 90.0}, {"date": "2017-04-15", "value": 87.0}, {"date": "2017-04-22", "value": 80.0}, {"date": "2017-04-29", "value": 85.0}, {"date": "2017-05-06", "value": 80.0}, {"date": "2017-05-13", "value": 83.0}, {"date": "2017-05-20", "value": 80.0}, {"date": "2017-05-27", "value": 83.0}, {"date": "2017-06-03", "value": 86.0}];
+		
+		// main init/rendering
+		$(function() {
+		    console.log( "ready!" );
+		    $("#modal").on("hidden.bs.modal", function () {
+		    	closeModal();
+		    });
+
+			$('#modal').modal('show');
+			buildSparkline();
+			buildRelatedItems(queries, "queriesId");
+			buildRelatedItems(topics, "topicsId");
+		});
+		
+		function closeModal() {
+			window.location.href = "/tools"; 
+		}
+		
+		function buildRelatedItems(items, parentId) {
+			
+			var parent = $("#" + parentId);
+			for(var idx in items) {
+				var item = items[idx];
+				
+				var htmlTemplate = "<div> " +
+                "<div style=\"margin-bottom:5px;margin-top:8px;\">"+item.title+"</div>" +
+                "<div class=\"progress\">" +
+                "    <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow="+item.value+" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: "+item.value+"%;\">" +
+                "        <span className=\"sr-only\">_value_</span>" +
+                "    </div>" +
+                "</div> " +    
+            	"</div>";
+            
+				parent.append(htmlTemplate);				
+			}
+		}
+		
+		function buildSparkline() {
+	        var width = 600;
+	        var height = 200;
+
+	        var svg = d3.selectAll("#sparklineId").append('svg')
+	                    .attr('class', 'bigline')
+	                    .attr("viewBox", "0 0 650 200")
+	                    .style('overflow', 'visible');
+	        
+	        var x = d3.scaleLinear().range([30, width - 10]);
+
+	        var month = d3.timeFormat('%B %Y');
+	        var thismonth = d3.timeFormat('%B');
+	        var today = new Date();
+	        var dayString = month(today).toString()
+	        var newYear = + dayString.substring(dayString.indexOf(' ')) - 1;
+
+	        svg.append('text')
+	            .text(thismonth(today) + ' ' + newYear)
+	            .attr('x', 30)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        svg.append('text')
+	            .text(month(today))
+	            .attr('x', width-10)
+	            .attr('y', 195)
+	            .style('fill', 'white')
+	            .style('font-size', 10)
+
+	        var y = d3.scaleLinear()
+	            .range([height - 20, 20]);
+	        
+	        var linedata = [];
+	        for (var j=0; j < graphData.length; j++){
+	            linedata.push({"index": j, "value": graphData[j].value});
+	        }
+	        
+	        x.domain(d3.extent(linedata, function(d) { return +d.index; }));
+	        y.domain([0, 100]);     
+	        
+	        var xAxis = d3.axisBottom(x).ticks(30);
+	        var yAxis = d3.axisLeft(y).tickSize(-570).tickValues([0,50,100]).ticks(4);
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(0, 180)')
+	            .call(xAxis)
+	            .selectAll('text')
+	                .remove();
+
+	        svg.append('g').attr('class', 'axis')
+	            .attr('transform', 'translate(30, 0)')
+	            .call(yAxis)
+	                .selectAll('text')
+	                .style('transform', 'translate(-20, 0)')
+
+	        var linefunc = d3.line()
+	            .x(function(d) { return x(d.index); })
+	            .y(function(d) { return y(d.value); })
+	            .curve(d3.curveBasis);
+
+	        var sparks = svg.append('path')
+	              .datum(linedata)
+	              .attr('id', 'line1')
+	              .attr('fill', 'none')
+	              .attr('stroke', '#FDBD00')
+	              .attr('stroke-linejoin', 'round')
+	              .attr('stroke-linecap', 'round')
+	              .attr('stroke-width', 1.5)
+	              .attr('d', linefunc);
+
+	        svg.append('circle')
+	              .attr('fill', '#FDBD00')
+	              .attr('r', 3)
+	              .attr('cx', x(linedata[0].index))
+	              .attr('cy', y(linedata[0].value));
+	    }
+		
+	</script>
+	
+
+       
+</body>
+</html>
